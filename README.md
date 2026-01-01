@@ -2,6 +2,8 @@
 
 A PHP application that evaluates capabilities (like programming or other textual generation) of different LLM models via the OpenRouter API.
 
+![](cli-report.png)
+
 ## Features
 
 - **Model Fetching**: Fetch all models from OpenRouter and export to editable CSV
@@ -184,7 +186,6 @@ The task prompt is defined in `data/<experiment-code>/task.md`. This allows:
 
 **Format for `data/<experiment-code>/task.md`:**
 
-````markdown
 # Task Definition
 
 ## Task Prompt
@@ -192,13 +193,8 @@ The task prompt is defined in `data/<experiment-code>/task.md`. This allows:
 ```markdown
 Write a PHP script that counts down from 10 to 1, outputting each number on a new line. Only output the code, no explanations.
 ```
-````
 
 ## Content Type
-
-`PHP code`
-
-````
 
 The prompt is extracted from the ` ```markdown ` code block. If no code block is found, the entire file content is used.
 
@@ -247,7 +243,7 @@ php llm-scoring.php report --format html
 
 # Generate HTML report with custom output path
 php llm-scoring.php report --format html --output my-report.html
-````
+```
 
 ### Stats Usage Examples
 
